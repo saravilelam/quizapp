@@ -56,3 +56,8 @@ header {
     height: 12px;
     border-radius: 999px;
 }
+
+main {
+    padding: 32px 24px;
+    
+}
