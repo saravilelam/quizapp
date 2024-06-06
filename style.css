@@ -9,7 +9,6 @@
 :root {
     --bg-color: #f4f6fa;
     --purple: #a729f5;
-    --white:#fff;
     --primary-text-color: #313e51;
     --secondary-text-color:#626c7f;
     --button-bg: #fff;
@@ -18,12 +17,14 @@
     --bg-css: #e0fdef;
     --bg-javascript: #ebf0ff;
     --bg-acessibilidade: #f9e7ff;
-    --bg-mobile: url(./assets/images/pattern--background-mobile-light.svg);
+    --white:#fff;
+    --bg-mobile: url(./assets/images/pattern-background-mobile-light.svg);
+    --bg-desktop: url(./assets/images/pattern-background-desktop-light.svg);
 }
 
 body {
     height: 100svh;
-    background: var(bg-mobile) var(--bg-color);
+    background: var(--bg-mobile) var(--bg-color);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -83,9 +84,7 @@ main {
 }
 
 .boas_vindas h1 strong {
-    font-weight: 500;
-
-
+    font-weight: 500px ;
 }
 
 .boas_vindas p{
@@ -142,4 +141,56 @@ main {
 
 .botao_acessibilidade div {
     color: var(--bg-acessibilidade);
+}
+
+@media (min-width:1100px) {
+    body {
+        background: var(--bg-desktop) var(--bg-color);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    header {
+        margin-block: 81px;
+    }
+
+    .tema{
+
+    }
+
+    main {
+        display: flex;
+        max-width: 1160px;
+        margin-inline: auto;
+    }
+
+    section{
+        width: 100%;
+    }
+
+    .boas_vindas h1{
+        font-size: 64px;
+        margin-bottom: 48px;
+    }
+
+    .boas_vindas p{
+        font-size: 20px;
+
+    }
+
+    .assuntos{
+        gap: 24px;
+    }
+
+    .assuntos button{
+        font-size: 28px;
+        padding: 20px;
+        gap: 32px;
+    }
+
+    .assuntos button div {
+        width: 56px;
+        height: 56px;
+        padding: 8px;
+    }
 }
