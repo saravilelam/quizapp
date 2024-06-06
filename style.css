@@ -22,9 +22,14 @@
     --bg-desktop: url(./assets/images/pattern-background-desktop-light.svg);
 }
 
-body .escuro {
+body.escuro {
+    --bg-color: #313e51;
     --bg-mobile: url(./assets/images/pattern-background-mobile-dark.svg);
     --bg-desktop: url(./assets/images/pattern-background-desktop-dark.svg);
+    --primary-text-color:#fff;
+    --secondary-text-color: #abc1e1;
+    --button-bg: #3b4d66;
+    --shadow: 0px 16px 40px 0px rgba(49,62,81,0.14);
 }
 
 body {
@@ -56,8 +61,8 @@ header {
 .tema button {
     height: 20px;
     width: 32px;
-    background: var(purple);
-    border: 0;
+    background: var(--purple);
+    border: 0px;
     border-radius: 999px;
     padding: 4px;
     
