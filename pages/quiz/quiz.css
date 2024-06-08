@@ -9,6 +9,7 @@
 :root {
     --bg-color: #f4f6fa;
     --purple: #a729f5;
+    --purple-hover:rgba(167, 41, 245, 0.6);
     --primary-text-color: #313e51;
     --secondary-text-color:#626c7f;
     --button-bg: #fff;
@@ -96,11 +97,11 @@ header {
     border-radius: 999%;
 }
 
-main{
+main {
     padding: 32px 24px;
 }
 
-.perguntas{
+.perguntas {
     margin-bottom: 40px;
 }
 
@@ -181,13 +182,13 @@ label:has(input:checked){
     display: none;
 }
 
-.alternativas div{
+.alternativas div {
     display: flex;
     align-items: center;
     gap: 16px;
 }
 
-.alternativas div span{
+.alternativas div span {
     display: block;
     width: 40px;
     height: 40px;
@@ -210,6 +211,12 @@ label:has(input:checked){
 
     font-size: 18px;
     font-weight: 500;
+    transition: background 0.3s;
+}
+
+.alternativas button:hover{
+    background: var(--purple-hover);
+    cursor: pointer;
 }
 
 @media(min-width:1100px) {
