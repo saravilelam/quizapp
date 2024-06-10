@@ -73,6 +73,13 @@ header {
     color: var(--primary-text-color);
 }
 
+.assunto button div{
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
 .tema {
     padding: 8px 0;
     display: flex;
@@ -91,6 +98,8 @@ header {
     border: 0;
     border-radius: 99px;
     padding: 4px;
+    display: flex;
+    cursor: pointer;
 }
 
 .tema button div{
@@ -200,6 +209,8 @@ main button:hover{
     .tema button {
         width: 48px;
         height: 28px;
+        display: flex;
+        cursor: pointer;
     }
 
     .tema button div{
