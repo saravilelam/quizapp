@@ -101,6 +101,19 @@ function alterarSinais(texto) {
 
 function guardarResposta(evento) {
     resposta = evento.target.valueidInputRespostas = evento.target.id
+    const botaoEnviar = document.querySelector(".alternativasbutton")
+    botaoEnviar.addEventListener("click", validarResposta)
+}
+
+function validarResposta() {
+    if(resposta === quiz.questions[pergunta-1].answer
+        
+    ) { document.querySelector(`label[for'${idInputRespostas}']`).setAttribute("id", "correta")
+    pontos = pontos+1
+    } else{
+        document.querySelector(`label[for'${idInputRespostas}']`).setAttribute("id", "errada")
+        document.querySelector(`label[for'${idInputRespostas}']`).setAttribute("id", "correta")
+    }
 }
 
 async function iniciar() {
@@ -112,6 +125,10 @@ async function iniciar() {
 const inputResposta = document.querySelector(".alternativas input")
 idInputRespostas.forEach(input=> {
     input.addEventListener("click", guardarResposta)
+    if (input.value === quiz.questions[pergunta-1].answer){
+        respostaCorretaId = input.id
+    }
 })
+
 
 iniciar()
