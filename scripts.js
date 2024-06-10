@@ -9,7 +9,7 @@ botaoTema.addEventListener("click", () => {
     trocarTema(body,botaoTema)
 })
 
-export function trocarTema (body, botaoTema) {
+export function trocarTema(body, botaoTema) {
     if (localStorage.getItem("tema")) {
         tema=localStorage.getItem("tema")
     }

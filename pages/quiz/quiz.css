@@ -89,8 +89,10 @@ header {
     width: 32px;
     background: var(--purple);
     border: 0;
-    border-radius: 99px;
+    border-radius: 999px;
     padding: 4px;
+    display: flex;
+    cursor: pointer;
 }
 
 .tema button div{
