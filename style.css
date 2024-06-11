@@ -89,7 +89,7 @@ main {
 
 .boas_vindas h1{
     font-size: 40px;
-    font-weight: 300px;
+    font-weight: 300;
     color: var(--primary-text-color);
     margin-top: 16px;
 }
