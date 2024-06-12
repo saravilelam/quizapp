@@ -15,9 +15,9 @@
     --primary-text-color: #313e51;
     --secondary-text-color:#626c7f;
     --pontuacao-bg: #fff;
-    --shadow: 0px 16px 40px 0px rgba(143, 160, 193, 0.14);
+    --shadow: 0px 16px 40px 0px rgba(143, 168, 193, 0.14);
     --bg-html: #fff1e9;
-    --bg-css: #e0fdef;
+    --bg-css: #e8fdef;
     --bg-javascript: #ebf0ff;
     --bg-acessibilidade: #f9e7ff;
     --white:#fff;
@@ -32,7 +32,7 @@ body.escuro {
     --bg-desktop: url(../../assets/images/pattern-background-desktop-dark.svg);
     --primary-text-color:#fff;
     --secondary-text-color: #abc1e1;
-    --pontuacao-bg: #3b4d66;
+    --pontuacao-bg: #3b4b66;
     --shadow: 0px 16px 40px 0px rgba(49,62,81,0.14);
 }
 
@@ -49,13 +49,13 @@ header {
     padding: 16px 24px;
 }
 
-.assunto{
+.assunto {
     display: flex;
     align-items: center;
     gap: 16px;
 }
 
-.assunto-icone{
+.assunto_icone {
     background: var(--bg-acessibilidade);
     width: 40px;
     height: 40px;
@@ -63,7 +63,23 @@ header {
     border-radius: 5px;
 }
 
-.assunto-icone img{
+.assunto_icone.html {
+    background: var(--bg-html);
+}
+
+.assunto_icone.css {
+    background: var(--bg-css);
+}
+
+.assunto_icone.javascript {
+    background: var(--bg-javascript);
+}
+
+.assunto_icone.acessibilidade {
+    background: var(--bg-acessibilidade);
+}
+
+.assunto_icone img{
     width: 100%;
 }
 
@@ -73,13 +89,6 @@ header {
     color: var(--primary-text-color);
 }
 
-.assunto button div{
-    width: 40px;
-    height: 40px;
-    padding: 5px;
-    border-radius: 5px;
-}
-
 .tema {
     padding: 8px 0;
     display: flex;
@@ -87,38 +96,30 @@ header {
     gap: 8px;
 }
 
-.tema img{
+.tema img {
     width: 16px;
 }
 
-.tema button{
+.tema button {
     height: 20px;
     width: 32px;
     background: var(--purple);
     border: 0;
-    border-radius: 99px;
+    border-radius: 999px;
     padding: 4px;
     display: flex;
     cursor: pointer;
 }
 
-.tema button div{
+.tema button div {
     background: var(--white);
     width: 12px;
     height: 12px;
-    border-radius: 999%;
+    border-radius: 999px;
 }
 
-main{
-    display: flex;
-    gap: 140px;
-    max-width: 1160px;
-    margin-inline: auto;
-}
-
-main h2,
-main > div {
-    width: 100%;
+main {
+    padding: 32px 24px;
 }
 
 main h2 {
@@ -164,12 +165,14 @@ main button {
     background: var(--purple);
     color: var(--white);
     width: 100%;
+
     font-size: 18px;
     font-weight: 500;
     transition: background 0.3s;
+    box-shadow: var(--shadow);
 }
 
-main button:hover{
+main button:hover {
     background: var(--purple-hover);
     cursor: pointer;
 }
@@ -182,7 +185,7 @@ main button:hover{
         background-repeat: no-repeat;
     }
 
-    header{
+    header {
         margin-block: 81px;
         max-width: 1160px;
         margin-inline: auto;
@@ -198,8 +201,8 @@ main button:hover{
         font-size: 28px;
     }
 
-    .tema{
-        width: 24px;
+    .tema {
+        gap: 16px;
     }
 
     .tema img {
@@ -209,12 +212,48 @@ main button:hover{
     .tema button {
         width: 48px;
         height: 28px;
-        display: flex;
         cursor: pointer;
     }
 
-    .tema button div{
+    .tema button div {
         width: 20px;
         height: 20px;
     }
+
+    main {
+        display: flex;
+        gap: 140px;
+        max-width: 1160px;
+        margin-inline: auto;
+    }
+
+    main h2,
+    main > div {
+        width: 100%;
+    }
+
+    main h2 {
+        font-size: 64px;
+    }
+
+    .pontuacao{
+        border-radius: 24px;
+        margin-bottom: 32px;
+    }
+
+    .pontuacao strong {
+        font-size: 144px;
+    }
+
+    .pontuacao p {
+        font-size: 24px;
+    }
+
+    main button {
+        font-size: 22px;
+        padding: 24px;
+        border-radius: 24px;
+    }
+
+
 }
